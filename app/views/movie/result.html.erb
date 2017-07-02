@@ -1,0 +1,9 @@
+
+
+<h1> <%=@moviename%>에 대한 검색결과 </h1>
+<% @name.each_with_index do |t,i|%>
+    <p>
+        <a href = "http://www.cine21.com<%=@link[i]%>">
+            <%=t.inner_text%> </br>
+        </a></p>
+<%end%>

@@ -1,0 +1,19 @@
+
+<form action="/movie/result" method="post">
+  영화이름검색:
+  <input type="text" name="moviename">
+  <input type="submit" value="검색">
+</form> <hr>
+
+
+<% @doc.css('ul.mov_star_list').each do |i| %>
+<p><%= i.css('li.mov_star_li div.over p.name').text %> 
+<% end %>
+
+<% @temp.each_with_index do |t,i|%>
+    <p>
+        <a href = "http://www.cine21.com<%=@link[i]%>">
+            <%=t.inner_text%> </br>
+        </a></p>
+<%end%>
+
